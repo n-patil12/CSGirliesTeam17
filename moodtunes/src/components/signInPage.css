@@ -8,8 +8,8 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto; 
+  z-index: 3;
 }
 
 .homepage-header {
@@ -87,6 +87,14 @@
   
 }
 
+.sumbit-button{
+  width: 8.5rem;
+  height: 4rem;
+  margin-left: 6rem;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
 .input-primary{
   background-color: #f9fafb;
   padding-left: 10rem;
@@ -106,14 +114,40 @@
   right: 0;
   top: 0;
   height: 45rem;
-  width: 25rem;
+  width: 35rem;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  padding-left: 200px;
-  overflow-y: fixed;
-  position: absolute;
+  padding-left: 2rem;
+  overflow-y: auto; 
   z-index: 3;
+}
+
+.new-account {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  margin-top: 15rem;
+  margin-left: 2.5rem;
+}
+
+.subtxt-signup {
+  font-size: 1.5rem;
+  font-weight: 150;
+  color: #333;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  margin-left: 12rem;
+}
+
+.signup-button{
+  width: 8.5rem;
+  height: 4rem;
+  margin-left: 12.5rem;
+  margin-top: 1rem;
+  font-size: 1.0rem;
 }
 

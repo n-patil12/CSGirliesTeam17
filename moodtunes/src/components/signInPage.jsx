@@ -25,13 +25,16 @@ export default function signInPage() {
           <div className='inputs-div'>
             <input type= 'text' className="input-primary"></input>
             <input type= 'text' className="input-secondary"></input>
+            <button className="sumbit-button" type="submit">login</button>
           </div>
         </div>
-
+        
       </section>
 
       <section id= "side_panel">
-        
+        <h1 className="new-account">New to the account?</h1>
+        <h1 className="subtxt-signup"> click to sign up! </h1>
+        <button className="signup-button" type="submit">sign-up</button>
       </section>
 
 
