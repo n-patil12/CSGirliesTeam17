@@ -1,0 +1,138 @@
+.homepage {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #f9fafb; 
+  padding: 5rem 0rem;
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.homepage-header {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937; 
+  letter-spacing: 0.5px;
+}
+
+@media(min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .text-content {
+    text-align: left;
+    width: 100%
+  }
+}
+
+.hero-background {
+  background-image: url('https://images.unsplash.com/photo-1612211894457-06f6f6cf8635?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+p {
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+
+/* Button styles */
+.button-primary {
+  padding: 0.75rem 1.5rem;
+  background-color: #17274b; 
+  color: white;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #17274b; 
+}
+
+.button-secondary {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #17274b;
+  color: #17274b;
+  border-radius: 0.375rem;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-secondary:hover {
+  background-color: #17274b;
+  color: white;
+}
+
+/* Feature Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: white;
+  max-width: 80vw;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  transform: translateY(-120px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .features {
+    flex-direction: row;
+  }
+}
+
+.feature-card {
+  flex: 1;
+  text-align: left;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.features h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.features p {
+  font-size: 0.95rem;
+  color: #666;
+}
