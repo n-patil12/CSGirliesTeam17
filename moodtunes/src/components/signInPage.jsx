@@ -1,6 +1,9 @@
 import './signInPage.css';
 import { FiMusic, FiEdit3, FiCompass } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
+import fbimg from '../assets/facebook-img.png';
+import youtubeimg from '../assets/youtube-img.png'
+import linkedinimg from '../assets/linkedin-img.png';
 
 export default function signInPage() {
   return (
@@ -11,17 +14,24 @@ export default function signInPage() {
       
       <section className="hero">
         <div className="text-content">
-          <h1>Welcome Back!</h1>
+          <h1 className="welcome-back-txt">Welcome Back!</h1>
+          <h1 className="subtxt"> Log back into your account </h1>
+          <div className="socials-div">
+            <img className='social-img' src={youtubeimg}/>
+            <img className='social-img' src={fbimg}/>
+            <img className='social-img' src= {linkedinimg}/>
+          </div>
+          <h1 className="subtxt"> or manually input your login info </h1>
           <div className='inputs-div'>
             <input type= 'text' className="input-primary"></input>
-            <input type= 'password' className="input-secondary"></input>
+            <input type= 'text' className="input-secondary"></input>
           </div>
         </div>
 
       </section>
 
       <section id= "side_panel">
-
+        
       </section>
 
 
