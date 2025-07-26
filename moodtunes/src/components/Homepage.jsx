@@ -1,7 +1,12 @@
 import './Homepage.css';
 import { FiMusic, FiEdit3, FiCompass } from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
 
 export default function Homepage() {
+  const navigate = useNavigate(); 
+  const handlesignInPageClick = () => {
+    navigate('/signin');
+  }
   return (
     <div className="homepage">
       <header className="homepage-header">
@@ -17,7 +22,7 @@ export default function Homepage() {
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
             <button className="button-primary">Sign Up</button>
-            <button className="button-secondary">Sign In</button>
+            <button onClick={handlesignInPageClick} className="button-secondary">Sign In</button>
           </div>
           </div>
         </div>

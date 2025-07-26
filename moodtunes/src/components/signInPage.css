@@ -1,0 +1,83 @@
+.homepage {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #f9fafb; 
+  padding: 5rem 0rem;
+  
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.homepage-header {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937; 
+  letter-spacing: 0.5px;
+}
+
+@media(min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .text-content {
+    text-align: left;
+    width: 100% 
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/*Labels*/
+
+.inputs-div{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: 'center';
+  max-width: 10rem;
+}
+
+.input_primary{
+  width: 100px;
+  display: block;
+}
+
+/* Feature Section */
+#side_panel {
+  /* background-image: url('../assets/new_account_panel_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
+  background-color: aquamarine;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 25rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  padding-left: 200px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 3;
+}
+
