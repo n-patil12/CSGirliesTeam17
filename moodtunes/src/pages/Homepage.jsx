@@ -1,7 +1,9 @@
 import './Homepage.css';
 import { FiMusic, FiEdit3, FiCompass } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
-
+import { HeaderComponent } from '../components/Header';
+import { FooterComponent } from '../components/Footer';
+import StarCard from '../components/StarCard';
 export default function Homepage() {
   const navigate = useNavigate(); 
   const handlesignInPageClick = () => {
@@ -9,12 +11,9 @@ export default function Homepage() {
   }
   return (
     <div className="homepage">
-      <header className="header">
-        <h2 className="logo">MoodTunes</h2>
-      </header>
-      
-      <section className="hero">
-        <div className="hero-background">
+      <HeaderComponent />
+      <div className="content-wrap">
+       
         <div className="text-content">
           <h1>Express Your Mood with Music.</h1>
           <p>
@@ -24,12 +23,16 @@ export default function Homepage() {
             <button className="button-primary">Sign Up</button>
             <button onClick={handlesignInPageClick} className="button-secondary">Sign In</button>
           </div>
-          </div>
         </div>
 
-      </section>
+        <StarCard 
+        text="This is a short paragraph inside a star-shaped card. You can style it as needed!"
+        backgroundColor="#ffe066"
+        textColor="#333"
+      />
 
-      <section className="features">
+
+      {/* <section className="features">
         <div className="feature-card">
           <div className="icon"><FiMusic size={40} /></div>
           <h3>Personalized Playlists</h3>
@@ -45,7 +48,9 @@ export default function Homepage() {
           <h3>Limitless Discovery</h3>
           <p>Explore new music genres and artists based on your mood trends.</p>
         </div>
-      </section>
+      </section> */}
+      </div>
+      <FooterComponent />
 
 
     </div>

@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useContext } from 'react';
 import { HeaderComponent } from '../components/Header';
 import { FooterComponent } from '../components/Footer';
+import SongBox from '../components/SongBox';
 import axios from 'axios';
 
 
 export default function JournalInput() {
     const [entry, setEntry] = useState("");
+    const [videoIds, setVideoIds] = useState([]);
 
     const handleAnalyze = async () => {
         console.log("Analyzing mood for entry:", {entry});
@@ -20,13 +22,19 @@ export default function JournalInput() {
     const data = res.data;
     const emotion = data.emotion;
     const playlist = data.playlist;
+    setVideoIds(playlist.map(song => song.id));
     console.log("Detected emotion:", emotion);
     console.log("Playlist data:", playlist);
     };
+
+    const handleVideoClick = (id) => {
+    const url = `https://www.youtube.com/watch?v=${id}`;
+    window.open(url, '_blank');
+  };
   return (
     <div className="journal-page">
       <HeaderComponent />
-
+      <div className="content-wrap">
       <p className="journal-title"> Welcome to your journal! Write away! </p>
 
         <div className="input-container">
@@ -46,6 +54,13 @@ export default function JournalInput() {
       {/* //TODO: Only display the next section when songsBoxes isn't empty */}
       <div>
         <p> Songs curated to your current mood...</p>
+
+        <div>
+          <div className="song-box">
+            <SongBox videoIds={videoIds} onVideoClick={handleVideoClick} />
+          </div>
+        </div>
+      </div>
       </div>
       <FooterComponent />
 

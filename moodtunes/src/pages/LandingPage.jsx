@@ -12,7 +12,7 @@ export default function LandingPage() {
   <div className="landing-page">
     <HeaderComponent />
 
-    <div className="content-sections">
+    <div className="content-sections content-wrap">
       <div className="mood-section">
         <p className="landing-text">What's your mood today?</p>
         <EmotionIcons onSelect={(emotion) => console.log(emotion)} />
