@@ -1,0 +1,49 @@
+
+
+.landing-page {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #f9fafb; 
+    padding: 5rem 2rem;
+}
+
+.content-sections {
+    position: absolute;
+    left: 2rem;
+    top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.landing-text{
+    font-size:3rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.mood-section {
+    flex: 1;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.playlist-section {
+    margin: 20px 0;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.playlist-boxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}

@@ -9,7 +9,7 @@ export default function Homepage() {
   }
   return (
     <div className="homepage">
-      <header className="homepage-header">
+      <header className="header">
         <h2 className="logo">MoodTunes</h2>
       </header>
       

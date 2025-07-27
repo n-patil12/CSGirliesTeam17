@@ -1,3 +1,5 @@
+@import url('../App.css');
+
 .homepage {
   height: 100vh;              /* Ensures it fits exactly the screen */
   width: 100vw;
@@ -10,13 +12,6 @@
   overflow: hidden;          /* Prevents scroll inside homepage */
   z-index: 3;
   position: relative;
-}
-
-.homepage-header {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  z-index: 10;
 }
 
 .logo {
