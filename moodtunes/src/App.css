@@ -7,6 +7,19 @@
 
 }
 
+.body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #f9fafb; 
+  padding: 5rem 0rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -51,9 +64,9 @@
 .header {
   position: absolute;
   width: 90%;
-  max-width: 90vw;
+  max-width: 80vw;
   top: 1rem;
-  left: 2rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
