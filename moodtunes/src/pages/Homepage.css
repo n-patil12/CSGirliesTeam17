@@ -103,7 +103,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  background: white;
+  background: rgb(255, 157, 218);
   max-width: 80vw;
   margin: 0 auto;
   padding: 3rem 1.5rem;
@@ -113,6 +113,7 @@
   z-index: 3;
   animation: slideInBottom 1s ease-in forwards;
   animation-delay: 0.5s;
+  margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -189,7 +190,7 @@
   }
 }
 
-.stars{
+/* .stars{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -203,7 +204,6 @@
   animation: fadeInUp 1s ease forwards;
 }
 
-/* Add delay to each card for a staggered reveal */
 .star-card:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -214,7 +214,7 @@
 
 .star-card:nth-child(3) {
   animation-delay: 0.6s;
-}
+} */
 
 .page {
   min-height: 100vh;

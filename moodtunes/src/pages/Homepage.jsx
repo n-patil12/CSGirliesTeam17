@@ -23,7 +23,7 @@ export default function Homepage() {
             <button onClick={() => navigate('/signin')} className="button-secondary">Sign In</button>
           </div>
         </div>
-        <div className='stars'>
+        {/* <div className='stars'>
           <div className="star-card">
             <StarCard 
               text="Music recommendations tailored to your unique moods and feelings."
@@ -50,11 +50,11 @@ export default function Homepage() {
               textAlign="center"
             />
           </div>
-        </div>
+        </div> */}
         
 
 
-      {/* <section className="features">
+      <section className="features">
         <div className="feature-card">
           <div className="icon"><FiMusic size={40} /></div>
           <h3>Personalized Playlists</h3>
@@ -70,7 +70,7 @@ export default function Homepage() {
           <h3>Limitless Discovery</h3>
           <p>Explore new music genres and artists based on your mood trends.</p>
         </div>
-      </section> */}
+      </section>
       </div>
       <Chatbot />
 
