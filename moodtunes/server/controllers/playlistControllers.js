@@ -38,7 +38,8 @@ Journal Entry:
 }
 
 export const createPlaylist = async (req, res) => {
-  const { entry, id: user_id } = req.body;
+  const { entry, id } = req.body;
+  console.log("Creating playlist for user:", id, "with entry:", entry);
 
   try {
     // Generate emotion and keyword using Gemini
@@ -64,7 +65,7 @@ export const createPlaylist = async (req, res) => {
     // Insert playlist into the database
     await pool.request()
       .input('id', sql.Int, playlist_id)
-      .input('user_id', sql.Int, user_id)
+      .input('user_id', sql.Int, id)
       .input('playlist_name', sql.VarChar, playlist_name)
       .input('songs', sql.Text, csvSongs)
       .query(`

@@ -4,16 +4,19 @@ import { useState, useContext } from 'react';
 import { HeaderComponent } from '../components/Header';
 import { FooterComponent } from '../components/Footer';
 import SongBox from '../components/SongBox';
+import { useUser } from '../context/userContext';
 import axios from 'axios';
 
 
 export default function JournalInput() {
     const [entry, setEntry] = useState("");
     const [videoIds, setVideoIds] = useState([]);
+    const { userId } = useUser();
+    const id = userId
 
     const handleAnalyze = async () => {
-        console.log("Analyzing mood for entry:", {entry});
-        const res = await axios.post('http://localhost:3001/playlist', { entry });
+        console.log("Analyzing mood for entry:", {entry, id});
+        const res = await axios.post('http://localhost:3001/playlist', { entry, id });
         if (res.status !== 200) {
             console.error("Error analyzing mood:", res.data);
             return;

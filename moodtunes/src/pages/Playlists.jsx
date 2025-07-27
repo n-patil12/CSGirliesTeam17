@@ -4,21 +4,28 @@ import { useState, useEffect } from 'react';
 import { HeaderComponent } from '../components/Header';
 import { FooterComponent } from '../components/Footer';
 import SongBox from '../components/SongBox';
+import { useUser } from '../context/userContext';
 import axios from 'axios';
 
 export default function Playlists() {
   const [videoIds, setVideoIds] = useState([]);
+  const { userId } = useUser();
 
-  // You can fetch mock playlist or useEffect to load saved one
   useEffect(() => {
-    const fetchMockPlaylist = async () => {
-      const entry = "Feeling good and productive"; // Example entry
-      const res = await axios.post('http://localhost:3001/playlist', { entry });
-      const playlist = res.data.playlist;
-      setVideoIds(playlist.map(song => song.id));
+    const fetchUserPlaylists = async () => {
+      try {
+        const res = await axios.get(`http://localhost:3001/api/playlists/${userId}`);
+        const playlists = res.data;
+
+        if (playlists.length > 0) {
+          setVideoIds(playlists[0].videoIds); // Use the first playlist's videoIds
+        }
+      } catch (error) {
+        console.error('Failed to fetch playlists:', error.message);
+      }
     };
 
-    fetchMockPlaylist();
+    fetchUserPlaylists();
   }, []);
 
   const handleVideoClick = (id) => {
