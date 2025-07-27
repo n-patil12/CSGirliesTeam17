@@ -23,12 +23,35 @@ export default function Homepage() {
             <button onClick={() => navigate('/signin')} className="button-secondary">Sign In</button>
           </div>
         </div>
+        <div className='stars'>
+          <div className="star-card">
+            <StarCard 
+              text="Music recommendations tailored to your unique moods and feelings."
+              backgroundColor="#f3ee86ff"
+              textColor="#888210ff"
+              textAlign="center"
+            />
+          </div>
 
-        <StarCard 
-        text="This is a short paragraph inside a star-shaped card. You can style it as needed!"
-        backgroundColor="#ffe066"
-        textColor="#333"
-      />
+          <div className="star-card">
+            <StarCard 
+              text="Simple text to express your emotions anytime, anywhere."
+              backgroundColor="#f57fceff"
+              textColor="#88105aff"
+              textAlign="center"
+            />
+          </div>
+
+          <div className="star-card">
+            <StarCard 
+              text="Explore new music genres and artists based on your mood trends."
+              backgroundColor="#82efc9ff"
+              textColor="#06965cff"
+              textAlign="center"
+            />
+          </div>
+        </div>
+        
 
 
       {/* <section className="features">

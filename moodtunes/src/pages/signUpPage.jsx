@@ -3,7 +3,8 @@ import logo from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import fbimg from '../assets/facebook-img.png';
 import youtubeimg from '../assets/youtube-img.png';
-import linkedinimg from '../assets/linkedin-img.png';
+import instaimg from '../assets/insta-img.png';
+import googleimg from '../assets/google-img.png';
 import ChatBot from './ChatBot';
 import axios from 'axios';
 import { useState } from 'react';
@@ -54,7 +55,8 @@ export default function SignUpPage() {
             <div className="socials-div">
               <img className="social-img" src={youtubeimg} alt="YouTube" />
               <img className="social-img" src={fbimg} alt="Facebook" />
-              <img className="social-img" src={linkedinimg} alt="LinkedIn" />
+              <img className="social-img" src={instaimg} alt="Instagram" />
+              <img className="social-img" src={googleimg} alt="Google" />
             </div>
 
             <h2 className="subtxt" id="subtext2" style={{ marginTop: '-1rem' }}>or put in your info</h2>
@@ -111,8 +113,12 @@ export default function SignUpPage() {
               />
 
               <button className="sumbit-button" type="submit">Sign Up</button>
+              <div className="signuplink">
+                <p>Have an account with us? <a className= "navigate-link" onClick={() => navigate('/signin')}> Sign in here!</a></p>
+              </div>
             </form>
           </div>
+          
           {/* <p style={{ marginTop: '5rem', textAlign: 'center' }}> Already have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signin')}>Log in</span></p> */}
         </section>
         

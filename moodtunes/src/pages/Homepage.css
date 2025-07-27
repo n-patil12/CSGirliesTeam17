@@ -20,7 +20,7 @@
 }
 
 .text-content {
-  margin-top: 5rem;
+  margin-top: 3rem;
   text-align: center;
   justify-content: center;
   width: 100%;
@@ -32,8 +32,8 @@
 }
 
 .text-content h1 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 3rem;
+  font-weight: 800;
   margin-bottom: 1.5rem;
   line-height: 1.2;
   opacity: 0;
@@ -185,4 +185,31 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.stars{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.star-card {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Add delay to each card for a staggered reveal */
+.star-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.star-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.star-card:nth-child(3) {
+  animation-delay: 0.6s;
 }

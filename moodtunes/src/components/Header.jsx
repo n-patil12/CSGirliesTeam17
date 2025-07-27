@@ -14,7 +14,7 @@ const HeaderComponent = () => {
           onClick={() => navigate('/')}
           style={{ cursor: 'pointer' }}
         />
-        <nav style={{ right: '2rem' }}>
+        <nav style={{ right: '2rem', fontSize: "25px"}}>
           <ul>
             <li onClick={() => navigate('/home')}>Home</li>
             <li onClick={() => navigate('/journal')}>Journal</li>

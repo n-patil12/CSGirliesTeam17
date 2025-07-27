@@ -3,7 +3,7 @@
 .landing-page {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: #f9fafb; 
+    background-color: #f7f9e1; 
     padding: 5rem 2rem;
 }
 
@@ -22,6 +22,7 @@
     font-size:3rem;
     text-align: center;
     margin: 20px 0;
+    color: #306496;
 }
 
 .mood-section {
@@ -46,4 +47,10 @@
     align-items: center;
     gap: 1rem;
     width: 100%;
+    color: #306496;
 }
+
+body, html {
+  overflow: hidden;
+}
+

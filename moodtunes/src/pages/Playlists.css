@@ -1,0 +1,32 @@
+@import url('../App.css');
+
+.playlists-page {
+  min-height: 100vh;
+  background-color: #f7f9e1;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+.playlist-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #306496;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 1rem;
+}

@@ -4,7 +4,7 @@
   min-height: 100vh;
   height: 100%;
   width: 100vw;
-  background-color: #f9fafb;
+  background-color: #f7f9e1;
   padding: 0;
   margin: 0;
   display: flex;
@@ -36,7 +36,7 @@
   margin-bottom: -1.5rem;
   line-height: 1.2;
   animation: slideInLeft 0.8s ease forwards;
-  margin-top: -1.5rem;
+  margin-top: -1.2rem;
 }
 
 .subtxt {
@@ -44,7 +44,7 @@
   font-weight: 150;
   color: rgb(48, 54, 68);
   line-height: 1.2;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   animation: slideInLeft 1s ease forwards;
   animation-delay: 0.1s;
   margin-top: -0.5rem;
@@ -57,12 +57,13 @@
   margin-bottom: 2rem;
   animation: slideInLeft 1.2s ease forwards;
   animation-delay: 0.2s;
+  margin-top: -1rem;
 }
 
 .social-img {
   width: 4.5rem;
   height: 4.5rem;
-  border-radius: 50%;  
+  border-radius: 10%;  
   object-fit: cover;              
   transition: transform 0.2s ease-in-out;
 }
@@ -92,7 +93,9 @@
   background-color: #ffdc8a79;
 }
 
-
+.inputs-div #signindiv{
+  margin-top: -3rem;
+}
 
 .sumbit-button {
   width: 10rem;
@@ -201,7 +204,7 @@
   flex: 1;
   overflow-y: auto;
   padding: 1rem;
-  background-color: #f3f4f6;
+  background-color: #f2f5e4;
   border-radius: 2rem;
   scrollbar-width: none;
 }
@@ -263,10 +266,11 @@
 .chat-body .bot-message .message-text {
   border-radius: 3px 13px 13px 13px;
   color: #306496;
+  background-color: #f7e8c2;
 }
 
 .chat-body .user-message .message-text {
-  background: #5dc68e;
+  background: #6d4fc2;
   color: #fff;
   border-radius: 13px 13px 3px 13px;
   margin-top: -1.5rem;
@@ -276,7 +280,7 @@
 .chat-footer {
   padding: 0.75rem;
   border-top: 1px solid #d1d5db;
-  background-color: #ffffff;
+  background-color: #f8f6e5;
   flex-shrink: 0;
   position: relative;
 }
@@ -308,7 +312,7 @@
   border: none;
   border-radius: 1rem;
   font-size: 1rem;
-  background-color: #ecebeb;
+  background-color: #f5f4d0;
   color: #1f2937;
 }
 
@@ -375,6 +379,10 @@
 
 .signuplink p{
   font-weight: 150;
+}
+
+.navigate-link{
+  cursor: pointer;
 }
 
 

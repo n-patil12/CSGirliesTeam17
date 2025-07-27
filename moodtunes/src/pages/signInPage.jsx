@@ -3,7 +3,8 @@ import logo from '../assets/logo.png';
 import { useNavigate } from 'react-router-dom';
 import fbimg from '../assets/facebook-img.png';
 import youtubeimg from '../assets/youtube-img.png';
-import linkedinimg from '../assets/linkedin-img.png';
+import instaimg from '../assets/insta-img.png';
+import googleimg from '../assets/google-img.png';
 import ChatBot from './ChatBot';
 import axios from 'axios';
 import { useState } from 'react';
@@ -52,12 +53,13 @@ export default function SignInPage() {
             <div className="socials-div">
               <img className="social-img" src={youtubeimg} alt="YouTube" />
               <img className="social-img" src={fbimg} alt="Facebook" />
-              <img className="social-img" src={linkedinimg} alt="LinkedIn" />
+              <img className="social-img" src={instaimg} alt="Instagram" />
+              <img className="social-img" src={googleimg} alt="Google" />
             </div>
 
             <h2 className="subtxt" id="subtext2">Or input your login info</h2>
 
-            <form className="inputs-div" onSubmit={handleSubmit}>
+            <form className="inputs-div" id="signindiv" onSubmit={handleSubmit}>
               <label htmlFor="email" className="input-label">Email</label>
               <input
                 type="email"
@@ -86,7 +88,7 @@ export default function SignInPage() {
 
               <button className="sumbit-button" type="submit">Login</button>
               <div className="signuplink">
-                <p>Or you're new to the account! <br></br> No worries, just <a> sign up here!</a></p>
+                <p>Or you're new to the account! <br></br> No worries, just <a className= "navigate-link" onClick={() => navigate('/signup')}> sign up here!</a></p>
               </div>
             </form>
           </div>
