@@ -55,7 +55,7 @@ export default function SignInPage() {
               <img className="social-img" src={linkedinimg} alt="LinkedIn" />
             </div>
 
-            <h2 className="subtxt" id="subtext2">or input your login info</h2>
+            <h2 className="subtxt" id="subtext2">Or input your login info</h2>
 
             <form className="inputs-div" onSubmit={handleSubmit}>
               <label htmlFor="email" className="input-label">Email</label>
@@ -85,6 +85,9 @@ export default function SignInPage() {
               />
 
               <button className="sumbit-button" type="submit">Login</button>
+              <div className="signuplink">
+                <p>Or you're new to the account! <br></br> No worries, just <a> sign up here!</a></p>
+              </div>
             </form>
           </div>
         </section>
@@ -92,6 +95,7 @@ export default function SignInPage() {
         <section id="side_panel"></section>
       </div>
       <ChatBot />
+      
     </div>
   );
 }

@@ -14,38 +14,37 @@
   position: relative;
 }
 
-
-  .hero {
-    flex-direction: row;
-    align-items: flex-start;
-    width: 48%;
-    margin-top: 10rem;
-  }
-  .text-content {
-    text-align: center;
-    width: 100%;
-    justify-content: center;
-  }
-
+.hero {
+  flex-direction: row;
+  align-items: flex-start;
+  width: 48%;
+  margin-top: 10rem;
+}
+.text-content {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
 
 .welcome-back-txt {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #111827;
-  margin-bottom: 0.5rem;
+  font-size: 10rem;
+  font-weight: 1200;
+  color: #306496;
+  margin-bottom: -1.5rem;
   line-height: 1.2;
-  
   animation: slideInLeft 0.8s ease forwards;
+  margin-top: -1.5rem;
 }
 
 .subtxt {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 150;
-  color: #111827;
+  color: rgb(48, 54, 68);
   line-height: 1.2;
   margin-bottom: 2rem;
   animation: slideInLeft 1s ease forwards;
   animation-delay: 0.1s;
+  margin-top: -0.5rem;
 }
 
 .socials-div {
@@ -78,6 +77,7 @@
   max-height: 15rem;
   animation: slideInLeft 1s ease forwards;
   width:100%;
+  margin-top: 3.5rem;
 }
 
 .inputs-div input {
@@ -256,6 +256,7 @@
 
 .chat-body .bot-message .message-text {
   border-radius: 3px 13px 13px 13px;
+  color: #306496;
 }
 
 .chat-body .user-message .message-text {
@@ -364,6 +365,10 @@
   outline: none;
   border-color: #6d4fc2;
   box-shadow: 0 0 0 2px rgba(109, 79, 194, 0.2);
+}
+
+.signuplink p{
+  font-weight: 150;
 }
 
 

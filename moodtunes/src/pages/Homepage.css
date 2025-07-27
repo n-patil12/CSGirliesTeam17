@@ -5,13 +5,12 @@
   min-width: 100vw;
   background-color: #f9fafb; 
   padding: 5rem 0rem;
-  
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  animation: fadeIn 0.8s ease-in-out;
 }
-
 
 .logo {
   font-size: 1.5rem;
@@ -20,22 +19,36 @@
   letter-spacing: 0.5px;
 }
 
-  .text-content {
-    margin-top: 5rem;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #306496;
-  }
+.text-content {
+  margin-top: 5rem;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #306496;
+  animation: slideInTop 1s ease-out forwards;
+}
 
 .text-content h1 {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in forwards;
+  animation-delay: 0.3s;
+}
+
+.text-content p {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  opacity: 0;
+  animation: fadeIn 1.2s ease-in forwards;
+  animation-delay: 0.6s;
 }
 
 .hero-background {
@@ -51,8 +64,6 @@
   position: relative;
 }
 
-
-
 /* Button styles */
 .button-primary {
   padding: 0.75rem 1.5rem;
@@ -61,11 +72,12 @@
   border-radius: 0.375rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button-primary:hover {
-  background-color: #77C9EF; 
+  background-color: #5ab7e0; 
+  transform: translateY(-2px);
 }
 
 .button-secondary {
@@ -75,12 +87,13 @@
   border-radius: 0.375rem;
   background: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .button-secondary:hover {
   background-color: #FEDC89;
   color: white;
+  transform: translateY(-2px);
 }
 
 /* Feature Section */
@@ -94,9 +107,10 @@
   padding: 3rem 1.5rem;
   transform: translateY(-120px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-
   position: relative;
   z-index: 3;
+  animation: slideInBottom 1s ease-in forwards;
+  animation-delay: 0.5s;
 }
 
 @media (min-width: 768px) {
@@ -109,7 +123,14 @@
   flex: 1;
   text-align: left;
   padding: 1rem;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
 }
+
+.feature-card:nth-child(1) { animation-delay: 0.4s; }
+.feature-card:nth-child(2) { animation-delay: 0.6s; }
+.feature-card:nth-child(3) { animation-delay: 0.8s; }
 
 .icon {
   font-size: 0.5rem;
@@ -125,4 +146,43 @@
 .features p {
   font-size: 0.95rem;
   color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { HeaderComponent } from '../components/Header';
 import { FooterComponent } from '../components/Footer';
 import StarCard from '../components/StarCard';
+import Chatbot from './ChatBot';
 export default function Homepage() {
   const navigate = useNavigate(); 
   const handlesignInPageClick = () => {
@@ -50,6 +51,7 @@ export default function Homepage() {
         </div>
       </section> */}
       </div>
+      <Chatbot />
 
 
     </div>
