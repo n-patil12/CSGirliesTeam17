@@ -54,7 +54,6 @@ export default function JournalInput() {
         </button>
       </div>
 
-      {/* //TODO: Only display the next section when songsBoxes isn't empty */}
       <div>
         <p> Songs curated to your current mood...</p>
 
