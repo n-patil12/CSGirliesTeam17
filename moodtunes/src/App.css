@@ -66,7 +66,7 @@
   width: 90%;
   max-width: 80vw;
   top: 1rem;
-
+  left: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -111,21 +111,6 @@
   padding: 0 0.5rem;
 }
 
-/* .content-wrap {
-  flex: 1;
-} */
-
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 5rem 2rem 8rem 2rem; /* Footer spacing included */
-  min-height: 100vh;
-  background-color: #f9fafb;
-}
-
 .content-wrap {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex: 1;
 }

@@ -9,7 +9,7 @@ export default function Homepage() {
   const navigate = useNavigate(); 
  
   return (
-    <div className="homepage">
+    <div className="page">
       <HeaderComponent />
       <div className="content-wrap">
        
