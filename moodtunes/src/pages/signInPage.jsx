@@ -90,7 +90,7 @@ export default function SignInPage() {
               </div>
             </form>
           </div>
-          <p style={{ marginTop: '0.5rem', textAlign: 'center' }}> Don't have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Register</span></p>
+          {/* <p style={{ marginTop: '0.5rem', textAlign: 'center' }}> Don't have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Register</span></p> */}
         </section>
 
         <section id="side_panel"></section>

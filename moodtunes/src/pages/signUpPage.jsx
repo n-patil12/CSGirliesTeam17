@@ -113,7 +113,7 @@ export default function SignUpPage() {
               <button className="sumbit-button" type="submit">Sign Up</button>
             </form>
           </div>
-          <p style={{ marginTop: '5rem', textAlign: 'center' }}> Already have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signin')}>Log in</span></p>
+          {/* <p style={{ marginTop: '5rem', textAlign: 'center' }}> Already have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signin')}>Log in</span></p> */}
         </section>
         
 
