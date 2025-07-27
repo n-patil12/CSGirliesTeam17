@@ -1,12 +1,12 @@
 import './signInPage.css';
-import { FiMusic, FiEdit3, FiCompass } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import fbimg from '../assets/facebook-img.png';
-import youtubeimg from '../assets/youtube-img.png'
+import youtubeimg from '../assets/youtube-img.png';
 import linkedinimg from '../assets/linkedin-img.png';
 import ChatBot from './ChatBot';
 
 export default function SignInPage() {
+  const navigate = useNavigate();
 
   return (
     <div className="homepage">
@@ -17,30 +17,48 @@ export default function SignInPage() {
       <section className="hero">
         <div className="text-content">
           <h1 className="welcome-back-txt">Welcome Back!</h1>
-          <h1 className="subtxt">Log back into your account</h1>
+          <h2 className="subtxt">Log back into your account</h2>
 
+          {/* Social Icons */}
           <div className="socials-div">
             <img className="social-img" src={youtubeimg} alt="YouTube" />
             <img className="social-img" src={fbimg} alt="Facebook" />
             <img className="social-img" src={linkedinimg} alt="LinkedIn" />
           </div>
 
-          <h1 className="subtxt">or input your login info</h1>
+          <h2 className="subtxt" id="subtext2">or input your login info</h2>
 
-          <div className="inputs-div">
-            <input type="text" className="input-primary" placeholder="Email" />
-            <input type="password" className="input-secondary" placeholder="Password" />
+          {/* Input Form with Labels */}
+          <form className="inputs-div">
+            <label htmlFor="email" className="input-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              className="input-primary"
+              placeholder="Enter your email"
+              name="email"
+              autoComplete="email"
+              required
+            />
+
+            <label htmlFor="password" className="input-label">Password</label>
+            <input
+              type="password"
+              id="password"
+              className="input-secondary"
+              placeholder="Enter your password"
+              name="password"
+              autoComplete="current-password"
+              required
+            />
+
             <button className="sumbit-button" type="submit">Login</button>
-          </div>
+          </form>
         </div>
       </section>
 
-      <section id="side_panel">
-        <h1 className="new-account">New to the account?</h1>
-        <h1 className="subtxt-signup">Click to sign up!</h1>
-        <button className="signup-button" type="submit">Sign Up</button>
-      </section>
+      <section id="side_panel"></section>
       <ChatBot />
-      </div>
+    </div>
   );
 }
