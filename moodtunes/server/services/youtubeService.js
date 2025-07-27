@@ -25,7 +25,7 @@ export const getPlaylistByEmotion = async (keywords) => {
             url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
         }));
 
-        return playlist
+        return { playlist, videoIds: playlist.map(song => song.id) };
     } catch (error) {
         console.error('YouTube API Error:', error.message);
     }

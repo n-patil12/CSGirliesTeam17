@@ -8,9 +8,11 @@ import googleimg from '../assets/google-img.png';
 import ChatBot from './ChatBot';
 import axios from 'axios';
 import { useState } from 'react';
+import { useUser } from '../context/userContext';
 
 export default function SignInPage() {
   const navigate = useNavigate();
+  const { setUserId } = useUser();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -23,6 +25,8 @@ export default function SignInPage() {
       const res = await axios.post('http://localhost:3001/auth/login', { email, password });
 
       if (res.status === 200) {
+        console.log("User logged in successfully:", res.data.user.id);
+        setUserId(res.data.user.id);
         navigate('/home');
       } else {
         console.error("Error logging in user:", res.data);

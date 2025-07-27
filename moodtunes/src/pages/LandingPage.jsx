@@ -4,9 +4,12 @@ import { HeaderComponent } from '../components/Header';
 import EmotionIcons from '../components/EmotionIcons';
 import PlaylistBox from '../components/PlaylistBox';
 import { FooterComponent } from '../components/Footer';
+import { useUser } from '../context/userContext';
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const { userId } = useUser();
+  console.log("User ID from context:", userId);
 
   return (
   <div className="page">
