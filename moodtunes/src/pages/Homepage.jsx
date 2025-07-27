@@ -50,7 +50,6 @@ export default function Homepage() {
         </div>
       </section> */}
       </div>
-      <FooterComponent />
 
 
     </div>
