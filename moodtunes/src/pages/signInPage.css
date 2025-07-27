@@ -1,3 +1,5 @@
+@import url('../App.css');
+
 .homepage {
   min-height: 100vh;
   min-width: 100vw;
@@ -10,13 +12,6 @@
   gap: 3rem;
   overflow-y: auto; 
   z-index: 3;
-}
-
-.homepage-header {
-  position: absolute;
-  top: 1rem;
-  left: 2rem;
-  z-index: 10;
 }
 
 .logo {
