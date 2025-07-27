@@ -20,7 +20,8 @@
     flex-direction: row;
     align-items: flex-start;
     width: 48%;
-    margin-top: 8rem;
+    margin-top: 3rem;
+    margin-left: -4rem;
   }
   .text-content {
     text-align: center;
