@@ -1,6 +1,8 @@
 import './Journal.css';
 import { useNavigate } from 'react-router-dom';
 import { useState, useContext } from 'react';
+import { HeaderComponent } from '../components/Header';
+import { FooterComponent } from '../components/Footer';
 import axios from 'axios';
 
 
@@ -8,8 +10,8 @@ export default function JournalInput() {
     const [entry, setEntry] = useState("");
 
     const handleAnalyze = async () => {
-        console.log("Analyzing mood for entry:", entry);
-        const res = await axios.get('http://localhost:3001/playlist', {params: {entry}});
+        console.log("Analyzing mood for entry:", {entry});
+        const res = await axios.post('http://localhost:3001/playlist', { entry });
         if (res.status !== 200) {
             console.error("Error analyzing mood:", res.data);
             return;
@@ -23,11 +25,9 @@ export default function JournalInput() {
     };
   return (
     <div className="journal-page">
-      <header className="header">
-        <h2 className="logo">MoodTunes</h2>
-      </header>
+      <HeaderComponent />
 
-      <h2 className="journal-title"> Journal </h2>
+      <p className="journal-title"> Welcome to your journal! Write away! </p>
 
         <div className="input-container">
           <textarea 
@@ -37,10 +37,17 @@ export default function JournalInput() {
           onChange={(e) => setEntry(e.target.value)}>
           </textarea>
         </div>
-
+      <div style={{textAlign: 'right', marginRight: '8 vw'}}>
         <button onClick={handleAnalyze} className="button-analyze">
-        Analyze Mood
-      </button>
+        Submit
+        </button>
+      </div>
+
+      {/* //TODO: Only display the next section when songsBoxes isn't empty */}
+      <div>
+        <p> Songs curated to your current mood...</p>
+      </div>
+      <FooterComponent />
 
     </div>
   );

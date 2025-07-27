@@ -47,6 +47,7 @@ export const getPlaylist = async (req, res) => {
 
 
     //Get playlist
+    console.log("Detected emotion:", emotion);
     console.log("Keyword for playlist search:", keyword);
     const playlist = await getPlaylistByEmotion(keyword);
 
