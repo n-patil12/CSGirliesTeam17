@@ -1,8 +1,9 @@
 
 import express from 'express';
-import { getPlaylist } from '../controllers/playlistControllers.js';
+import { getPlaylists, createPlaylist } from '../controllers/playlistControllers.js';
 const router = express.Router();
 
-router.post('/', getPlaylist);
+router.post('/', createPlaylist);
+router.get('/:user_id', getPlaylists);
 
 export default router;
