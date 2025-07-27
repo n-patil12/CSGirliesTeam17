@@ -32,10 +32,10 @@ export default function JournalInput() {
     window.open(url, '_blank');
   };
   return (
-    <div className="journal-page">
+    <div className="page">
       <HeaderComponent />
       <div className="content-wrap">
-      <p className="journal-title"> Welcome to your journal! Write away! </p>
+      <h1 className="journal-title"> Welcome to your journal! Write away! </h1>
 
         <div className="input-container">
           <textarea 

@@ -9,7 +9,7 @@ export default function LandingPage() {
   const navigate = useNavigate();
 
   return (
-  <div className="landing-page">
+  <div className="page">
     <HeaderComponent />
 
     <div className="content-sections content-wrap">

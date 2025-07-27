@@ -1,21 +1,24 @@
 @import url('../App.css');
 
-.journal-page {
+.page {
   min-height: 100vh;
-  width: 100vw;
-  background-color: #f9fafb; 
-  padding: 5rem 2rem;
-  
-  margin: 0 auto;
+  max-width: 100vw;
+  background-color: #f9fafb;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  overflow-y: auto;
+  gap: 3rem;
+  overflow: hidden;
+  z-index: 3;
+  position: relative;
+
 }
 
 .content-wrap {
   flex: 1;
+  max-width: 100vw;
+  padding: 6rem 2rem;
 }
 
 .logo {
@@ -26,6 +29,7 @@
 }
 
 .journal-title {
+  width: 100vw;
   font-size: 2rem;
   color: #111827;
   margin-bottom: 1rem;
@@ -34,7 +38,7 @@
 
 .journal-textarea {
 
-  width: 85vw;
+  width: 90vw;
   height: 200px;
   padding: 1rem;
   border: 1px solid #d1d5db; 
@@ -54,4 +58,5 @@
   text-align: center;
   justify-content: center;
   right: 0;
+  padding: 0.5rem 1rem;
 }
