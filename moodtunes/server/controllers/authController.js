@@ -5,19 +5,19 @@ import pool from '../db/dbConfig.js';
 
 // SignIn
 export const handleLogin = async (req, res) => {
-  const { username, password } = req.body;
+  const { email, password } = req.body;
 
-  if (!username || !password) {
-    return res.status(400).json({ message: 'Username and password are required.' });
+  if (!email || !password) {
+    return res.status(400).json({ message: 'Email and password are required.' });
   }
 
   try {
     const result = await pool.request()
-      .input('username', sql.VarChar, username)
-      .query('SELECT * FROM Users WHERE username = @username');
+      .input('email', sql.VarChar, email)
+      .query('SELECT * FROM Users WHERE email = @email');
 
     if (result.recordset.length === 0) {
-      return res.status(401).json({ message: 'Username not found.' });
+      return res.status(401).json({ message: 'Email not found.' });
     }
 
     const user = result.recordset[0];
@@ -32,6 +32,8 @@ export const handleLogin = async (req, res) => {
       user: {
         id: user.id,
         username: user.username,
+        email: user.email,
+        name: user.name,
       }
     });
 
