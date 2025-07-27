@@ -47,7 +47,7 @@ Together, we combined our interests in emotional wellness, artificial intelligen
    npm run dev
    ```
 
-4. Open your browser and navigate to `http://localhost:3000` (or the port specified) to view the app.
+4. Open your browser and navigate to `http://localhost:3001` (or the port specified) to view the app.
 
 ---
 
