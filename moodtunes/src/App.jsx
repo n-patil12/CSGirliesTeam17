@@ -10,16 +10,18 @@ import PlaylistPage from './pages/Playlists';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/signin" element={<SignInPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/journal" element={<JournalPage />} />
-        <Route path="/home" element={<LandingPage />} />
-        <Route path="/playlists" element={<PlaylistPage />} />
-      </Routes>
-    </Router>
+    <UserProvider> {/* <-- Wrap with the provider */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/signin" element={<SignInPage />} />
+          <Route path="/signup" element={<SignUpPage />} />
+          <Route path="/journal" element={<JournalPage />} />
+          <Route path="/home" element={<LandingPage />} />
+          <Route path="/playlists" element={<PlaylistPage />} />
+        </Routes>
+      </Router>
+    </UserProvider>
   );
 }
 
