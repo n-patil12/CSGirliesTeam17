@@ -7,9 +7,7 @@ import StarCard from '../components/StarCard';
 import Chatbot from './ChatBot';
 export default function Homepage() {
   const navigate = useNavigate(); 
-  const handlesignInPageClick = () => {
-    navigate('/signin');
-  }
+ 
   return (
     <div className="homepage">
       <HeaderComponent />
@@ -21,8 +19,8 @@ export default function Homepage() {
             Write a journal entry, and MoodTunes will find a playlist that perfectly fits how you feel. Discover music that resonates with your emotions.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <button className="button-primary">Sign Up</button>
-            <button onClick={handlesignInPageClick} className="button-secondary">Sign In</button>
+            <button onClick={() => navigate('/signup')} className="button-primary">Sign Up</button>
+            <button onClick={() => navigate('/signin')} className="button-secondary">Sign In</button>
           </div>
         </div>
 
