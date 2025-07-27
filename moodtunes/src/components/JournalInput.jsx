@@ -9,7 +9,7 @@ export default function JournalInput() {
 
     const handleAnalyze = async () => {
         console.log("Analyzing mood for entry:", entry);
-        const res = await axios.post('http://localhost:3001/emotion/analyze', {entry});
+        const res = await axios.get('http://localhost:3001/playlist', {params: {entry}});
         if (res.status !== 200) {
             console.error("Error analyzing mood:", res.data);
             return;
@@ -17,7 +17,9 @@ export default function JournalInput() {
 
     const data = res.data;
     const emotion = data.emotion;
+    const playlist = data.playlist;
     console.log("Detected emotion:", emotion);
+    console.log("Playlist data:", playlist);
     };
   return (
     <div className="journal-page">
