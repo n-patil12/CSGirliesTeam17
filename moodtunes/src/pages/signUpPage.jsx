@@ -8,8 +8,10 @@ import ChatBot from './ChatBot';
 import axios from 'axios';
 import { useState } from 'react';
 
-export default function SignInPage() {
+export default function SignUpPage() {
   const navigate = useNavigate();
+  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,9 +19,9 @@ export default function SignInPage() {
     e.preventDefault();
 
     try {
-      console.log("Logging in user:", { email, password });
+      console.log("Registering user:", { name, username, email, password });
 
-      const res = await axios.post('http://localhost:3001/auth/login', { email, password });
+      const res = await axios.post('http://localhost:3001/auth/register', { name, username, email, password });
 
       if (res.status === 200) {
         navigate('/home');
@@ -46,8 +48,8 @@ export default function SignInPage() {
       <div className="content-wrap">
         <section className="hero">
           <div className="text-content">
-            <h1 className="welcome-back-txt">Welcome Back!</h1>
-            <h2 className="subtxt">Log back into your account</h2>
+            <h1 className="welcome-back-txt">Welcome!</h1>
+            <h2 className="subtxt">Create a new account</h2>
 
             <div className="socials-div">
               <img className="social-img" src={youtubeimg} alt="YouTube" />
@@ -55,9 +57,33 @@ export default function SignInPage() {
               <img className="social-img" src={linkedinimg} alt="LinkedIn" />
             </div>
 
-            <h2 className="subtxt" id="subtext2">or input your login info</h2>
+            <h2 className="subtxt" id="subtext2" style={{ marginTop: '-1rem' }}>or put in your info</h2>
 
-            <form className="inputs-div" onSubmit={handleSubmit}>
+            <form className="inputs-div" style={{ marginTop: '4rem' }} onSubmit={handleSubmit}>
+              <label htmlFor="name" className="input-label">Name</label>
+              <input
+                type="text"
+                id="name"
+                className="input-primary"
+                placeholder="Enter your name"
+                name="name"
+                autoComplete="name"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+               <label htmlFor="username" className="input-label">Username</label>
+              <input
+                type="text"
+                id="username"
+                className="input-primary"
+                placeholder="Enter your username"
+                name="username"
+                autoComplete="username"
+                required
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
               <label htmlFor="email" className="input-label">Email</label>
               <input
                 type="email"
@@ -84,11 +110,12 @@ export default function SignInPage() {
                 onChange={(e) => setPassword(e.target.value)}
               />
 
-              <button className="sumbit-button" type="submit">Login</button>
+              <button className="sumbit-button" type="submit">Sign Up</button>
             </form>
           </div>
-          <p style={{ marginTop: '0.5rem', textAlign: 'center' }}> Don't have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signup')}>Register</span></p>
+          <p style={{ marginTop: '5rem', textAlign: 'center' }}> Already have an account? <span style={{ color: '#C7E5BC', cursor: 'pointer' }} onClick={() => navigate('/signin')}>Log in</span></p>
         </section>
+        
 
         <section id="side_panel"></section>
       </div>
