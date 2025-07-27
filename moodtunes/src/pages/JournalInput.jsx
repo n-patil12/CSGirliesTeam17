@@ -45,7 +45,7 @@ export default function JournalInput() {
           onChange={(e) => setEntry(e.target.value)}>
           </textarea>
         </div>
-      <div style={{textAlign: 'right', marginRight: '8 vw'}}>
+      <div style={{textAlign: 'right'}}>
         <button onClick={handleAnalyze} className="button-analyze">
         Submit
         </button>
