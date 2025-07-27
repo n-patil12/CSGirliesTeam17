@@ -14,8 +14,9 @@ export default function Playlists() {
   useEffect(() => {
     const fetchUserPlaylists = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/api/playlists/${userId}`);
+        const res = await axios.get(`http://localhost:3001/playlist/${userId}`);
         const playlists = res.data;
+        console.log("Fetched playlists:", playlists);
 
         if (playlists.length > 0) {
           setVideoIds(playlists[0].videoIds); // Use the first playlist's videoIds
