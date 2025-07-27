@@ -6,6 +6,7 @@ import { FooterComponent } from '../components/Footer';
 import SongBox from '../components/SongBox';
 import { useUser } from '../context/userContext';
 import axios from 'axios';
+import Chatbot from './ChatBot';
 
 
 export default function JournalInput() {
@@ -63,6 +64,7 @@ export default function JournalInput() {
           </div>
         </div>
       </div>
+      <Chatbot />
       </div>
       <FooterComponent />
 
