@@ -2,7 +2,7 @@
 
 MoodTunes is a soulful music recommendation web app that analyzes the emotional tone of your journal entry and curates a personalized playlist based on your mood. It's designed for those who want music that *feels* right.
 
-Built for the **CSGirlies 2025 Hackathon** — Theme: *“Make anything, but make it YOU.”*
+Built for the **CSGirlies AI v HI 2025 Hackathon** — Theme: *“Make anything, but make it YOU.”*
 
 ---
 
