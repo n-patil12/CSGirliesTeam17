@@ -26,6 +26,8 @@ Together, we combined our interests in emotional wellness, artificial intelligen
 
 ---
 
+## Can view our video through this link: https://devpost.com/software/team-17-ozv17a?ref_content=my-projects-tab&ref_feature=my_projects
+
 ## 🛠️ How to Run the Project Locally
 
 1. **Clone the repository**
